@@ -6,6 +6,7 @@ class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 1
 
+
 class QuestionAdmin(admin.ModelAdmin):
     fieldsets = [
         ("Question Text", {"fields": ["question_text"]}),

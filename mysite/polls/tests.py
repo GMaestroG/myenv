@@ -11,6 +11,7 @@ def create_question(question_text, days):
     return Question.object.create(question_text=question_text, pub_date=time)
 
 class QuestionIndexViewTests(TestCase):
+
     def test_no_questions(self):
         """
         If no questions exist, an appropriate message is displayed.
@@ -68,6 +69,7 @@ class QuestionIndexViewTests(TestCase):
         )
 
 class QuestionModelTests(TestCase):
+
     def test_was_published_recently_with_future_question(self):
         """was_published_recently() returns False for question whose pub_date
             is in the future."""
